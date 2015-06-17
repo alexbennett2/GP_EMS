@@ -1,0 +1,25 @@
+<h1> GP EMS</h1>
+<br>
+<br>
+<%= form_for :article, url: articles_path do |f| %>
+	
+	<%= f.label :'Building Type' %><br>
+	<%= f.select :btype, ['','Secondary School','Small Office','Small Hotel'] %>
+	<br>
+	<br>
+	<%= f.label :'Building Vintage' %><br>
+	<%= f.select :bvin, ['','Pre 1980','Post 1980','New Construction'] %>
+	<br>
+	<br>
+	<%= f.label :'Weather Station' %><br>
+	<%= f.select :bweather, ['','Athens','Warner Robins','Valdosta Rgnl'] %>
+	<br>
+	<br>
+
+
+<% end %>
+
+
+<br>
+<%= button_to "Analysis", articles_action_path, method: :analysis %> 
+
